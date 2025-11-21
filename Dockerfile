@@ -44,8 +44,8 @@ RUN chmod +x /root/download_gecko_and_mono.sh \
     && /root/download_gecko_and_mono.sh "$(wine --version | sed -E 's/^wine-//')"
 
 # Configure locale for unicode
-RUN locale-gen en_US.UTF-8
-ENV LANG en_US.UTF-8
+RUN locale-gen zh_CN.UTF-8
+ENV LANG zh_CN.UTF-8
 
 COPY pulse-client.conf /root/pulse/client.conf
 COPY entrypoint.sh /usr/bin/entrypoint
